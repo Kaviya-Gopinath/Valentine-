@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Valentine's Day ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: url("images.jpeg") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 50px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 45px;
+            color: #ff66cc;
+            text-shadow: 0 0 15px pink, 0 0 25px hotpink;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .messageLabel {
+            display: none;
+            margin-top: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 25px;
+            border-radius: 15px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 0 25px pink;
+            line-height: 1.6;
+        }
+
+        input {
+            margin-top: 20px;
+            transform: scale(1.5);
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #ff1a66;
+        }
+     
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>💌</h1>
+
+    <p> Baby, I want to tell you something… touch the red icon <br>
+If you want, play the music and enjoy it 🎶”</p>
+ 
+      <button onclick="toggleMusic()">Play Music 🎶</button> <br>
+      
+   <button class="heart-button" onclick="showMessage()"></button>
+    <br>
+
+ 
+ 
+    <label class="messageLabel" id="loveMessage">
+        💖 My Athaan 💖 <br><br>
+
+        The first LinkedIn message I received from you was just a simple “Hi, hello.”  
+        At that time, I never knew that one small message would change my life so beautifully.  
+<br>
+        I never expected anything, but what I received from you was double and triple the happiness I ever imagined ✨  
+<br>
+        You are so cool and funny when you talk to me.  <br>
+        You are my friend, my husband, my boyfriend — you are everything in one person.  <br>
+        What more do I need in my life?  🫂
+<br><br>
+        I like you sooooo much 😘  <br>
+        I love you so much, Athaan ❤️  
+<br><br>
+        If I have ever made any mistake, please forgive me.  <br>
+        If I have ever spoken wrongly, I am truly sorry.  
+<br><br>
+        I will never leave you.  <br>
+        I cannot imagine my life without you.  
+<br><br>
+        Sometimes I fight with you in chat even after saying all these sweet things 😅  <br>
+        Please don’t take it seriously. That’s just me being me. Adjust panniko 😜  
+
+        <br><br>
+        <strong>Happy Valentine’s Day, my Athaan ❤️💌</strong>
+    </label>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="love.mp3" type="audio/mpeg">
+    </audio>
+
+</div>
+
+<script>
+    function showMessage() {
+    var msg = document.getElementById("loveMessage");
+    var checkbox = document.querySelector("input[type='checkbox']");
+
+    if (checkbox.checked) {
+        msg.style.display = "block";
+    } else {
+        msg.style.display = "none";
+    }
+}
+var heartClicked = false;
+
+function showMessage() {
+    var msg = document.getElementById("loveMessage");
+    heartClicked = !heartClicked; // toggle true/false
+
+    if (heartClicked) {
+        msg.style.display = "block";
+    } else {
+        msg.style.display = "none";
+    }
+}
+
+    function toggleMusic() {
+    var music = document.getElementById("bgMusic");
+    var button = document.querySelector("button");
+
+    if (music.paused) {
+        music.play();
+        button.textContent = "Pause Music 🎶"; // Change button text
+    } else {
+        music.pause();
+        button.textContent = "Play Music 🎶"; // Change back
+    }
+}
+</script>
+
+</body>
+</html>
